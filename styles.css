@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* Colours */
+    --clr-accent: #4891FF;
+    --clr-accent-hover: #1570F9;
+    --clr-light: #FFFFFF;
+    --clr-slate: #ededed;
+    --clr-dark: #131316;
+    --clr-divider-dark: #494949;
+    --clr-divider-light: #DFDEE2;
+    --clr-text-light: #fff;
+    --clr-text-slate: #BCC2C3;
+    --clr-text-dark: #000;
+    --clr-tab-bg: #F4F4F6;
+    --clr-tab-btn-hover: #DBE7F9;
+    --clr-btn-secondary: #f5f5f5;
+
+    /* Font-sizes */
+    --font-size-base: 1rem;
+    --font-hero: clamp(2.4rem, 4vw, 4rem);
+}
+/* SIMPLE CSS RESET */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+    color: #333;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* Remove all animations, transitions and smooth scrolling for people who prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Utility Classes ---- */
+
+.btn--primary {
+    background-color: var(--clr-accent);
+    color: var(--clr-text-light);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+.btn--secondary {
+    background-color: var(--clr-btn-secondary);
+    color: var(--clr-text-dark);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+}   
