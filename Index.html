@@ -11,19 +11,30 @@
 </head>
 <body>
     <div class="wrapper">
-        <header>
-            <nav class="nav-main">
-                <span class="logo"></span>
-                <ul class="nav-list">
-                    <li class="nav-items"><a href="http://" target="_blank" rel="noopener noreferrer">Features</a></li>
-                    <li class="nav-items"><a href="http://" target="_blank" rel="noopener noreferrer">About Us</a></li>
-                    <li class="nav-items"><a href="http://" target="_blank" rel="noopener noreferrer">blog</a></li>
-                    <button>Log in</button>
-                </ul>
-            </nav>
+        <header style="grid-area: hero;">
+            <div class="nav-main">
+                <nav class="navbar">
+                    <span class="logo">
+                        <img src="./assets/Logo.svg" alt="Brand Logo">
+                    </span>
+                    <button class="toggle-menu" aria-label="Toggle menu">
+                        <div class="line-top"></div>
+                        <div class="line-bottom"></div>
+                    </button>
+                    <div class="nav-menu">
+                        <ul class="nav-main-list">
+                            <li class="nav-main-items"><a href="http://" target="_blank" rel="noopener noreferrer">Features</a></li>
+                            <li class="nav-main-items"><a href="http://" target="_blank" rel="noopener noreferrer">About Us</a></li>
+                            <li class="nav-main-items"><a href="http://" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                        </ul>
+                        <button type="button" class="login-btn btn--secondary">Log in</button>
+                    </div>
+                </nav>
+            </div>
         </header>
         <main></main>
         <footer></footer>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
