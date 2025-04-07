@@ -7,20 +7,17 @@
     <meta name="description" content="Modern SaaS landing page">
     <meta name="robots" content="index, follow">
     <title>Growth</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="wrapper">
         <header style="grid-area: header;">
-            <div class="nav-main">
+            <div class="nav-area">
                 <nav class="navbar">
                     <span class="logo">
                         <img src="./assets/Logo.svg" alt="Brand Logo">
                     </span>
-                    <button class="toggle-menu" aria-label="Toggle menu">
-                        <div class="line-top"></div>
-                        <div class="line-bottom"></div>
-                    </button>
                     <div class="nav-menu">
                         <ul class="nav-main-list">
                             <li class="nav-main-items"><a href="http://" target="_blank" rel="noopener noreferrer">Features</a></li>
@@ -29,6 +26,10 @@
                         </ul>
                         <button type="button" class="login-btn btn--secondary">Log in</button>
                     </div>
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <div class="line-top"></div>
+                        <div class="line-bottom"></div>
+                    </button>
                 </nav>
             </div>
 
@@ -57,7 +58,8 @@
                 </figure>
                 <button type="button" class="btn--primary">Get Started</button>
             </section>
-            <section class="testimonial" style="grid-area: testimonials;">
+
+           <section class="testimonial" style="grid-area: testimonials;">
                 <article>
                     <h2>What People say</h2>
                     <p>Don't just take our word for it, see the success  stories from businesses just like yours.</p>
@@ -98,7 +100,67 @@
                     </div>
                 </div>
             </section>
-            <section></section>
+
+            <section class="subscription">
+                <article>
+                    <h2>Pricing</h2>
+                    <p>Start free and scale while you grow. <br>No hidden fees. Unlimited users for free.</p>
+                </article>
+                <div class="plans">
+                    <div class="plan-free-card">
+                        <div class="plan-info info-free">
+                            <span>
+                                <h3 class="title-lg plan">Simple</h3>
+                                <p class="txt-sm">
+                                    Keep track of your contacts, gain valuable insights, analyse live data and performance metrics.
+                                </p>
+                            </span>
+                            <span>
+                                <span class="title-lg" style="font-size: 28px;">Free</span> &nbsp;*
+                                <span class="txt-Xsm">No credit card required</span>
+                            </span>
+                        </div>
+                        <div class="plan-benifits free">
+                            <ul>
+                                <li><i class='bx bx-check'></i> Real-time monitoring</li>
+                                <li><i class='bx bx-check'></i> Track key performance indicators</li>
+                                <li><i class='bx bx-check'></i> Schedule appointments</li>
+                                <li><i class='bx bx-check'></i> Organize, delegate and keep track of tasks</li>
+                            </ul>
+                            <button type="button" class="btn--primary">Get started</button>
+                        </div>
+                    </div>
+
+                    <div class="plan-premium-card">
+                        <div class="plan-info info-premium">
+                            <span>
+                                <h3 class="title-lg plan">Premium</h3>
+                                <p class="txt-sm">
+                                    Keep track of your contacts, gain valuable insights, analyse live data and performance metrics.
+                                </p>
+                            </span>
+                            <span>
+                                <span class="title-lg" style="font-size: 28px;"">$49 </span>
+                                <span class="txt-sm">/month</span>
+                            </span>
+                        </div>
+                        <div class="plan-benifits pro">  
+                            <ul>
+                                <p class="txt-sm">Everything from the pree plan <br />plus:</p>
+                                <li><i class='bx bx-check'></i> Data-driven decisions</li>
+                                <li><i class='bx bx-check'></i> Data visualisation</li>
+                                <li><i class='bx bx-check'></i> Schedule appointments</li>
+                                <li><i class='bx bx-check'></i> Store and organise contact information</li>
+                                <li><i class='bx bx-check'></i> Teal-time communication tools for messaging and video conferencing</li>
+                            </ul>
+                            <button type="button" class="btn--primary">Get started</button>
+                        </div>
+                    </div>
+                </div>
+                <span>
+                    <p>All prices are in USD and charged per month with applicable taxes added at checkout.</p>
+                </span>
+            </section>
             <section></section>
         </main>
 
