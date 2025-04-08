@@ -24,9 +24,9 @@
 
     /* Font-sizes */
     --font-size-base: 1rem;
-    --font-hero-head: clamp(2.25rem, 4vw, 6rem);
-    --font-hero-para: clamp(1.4rem, 4vw, 2rem);
-    --font-heading: clamp(2rem, 2vw, 4rem)
+    --font-hero-head: clamp(2.25rem, 5vw, 6rem);
+    --font-hero-para: clamp(1.4rem, 2vw, 2rem);
+    --font-heading: clamp(2rem, 3vw, 4rem)
 }
 /* SIMPLE CSS RESET */
 html:focus-within {
@@ -67,6 +67,10 @@ h2 {
 }
 h3 {
     font-weight: 500;
+}
+article p {
+    max-width: 55ch;
+    text-align: center;
 }
 p, h1, h2, h3 {
   overflow-wrap: break-word;
@@ -216,7 +220,7 @@ header {
 .login-btn {
     opacity: 0;
     transition: 240ms ease;
-    transition-delay: 100ms;
+    transition-delay: 150ms;
 }
 
 .menu-active {
@@ -292,27 +296,42 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 2.5rem;
+}
+.get-started h2 {
+    max-width: 25ch;
+}
+.get-started figure {
+    max-width: 64rem;
 }
 .get-started figure img {
     border-radius: 12px;
+}
+.get-started button {
+    width: 11.25rem;
 }
 .testimonial {
     height: 80vh;
     display: grid;
     grid-template-rows: 1fr 3fr;
+    justify-content: center;
+    padding-top: 0;
 }
-.testimonial article {
+.testimonial article,
+.reviews-slider {
     width: 100%;
     height: 100%;
+}
+.testimonial article {
+    padding-block: 4rem;
     text-align: center;
+    border-top: 1px solid var(--clr-divider-dark);
 }
 .testimonial article h2 {
     margin-bottom: 1rem;
 }
 .reviews-slider {
-    width: 100%;
-    height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -325,6 +344,7 @@ main {
         rgba(0,0,0,1) 20%,
         rgba(0,0,0,0)
     );
+    background-color: #1570F9;
 }
 .review {
     width: 100%;
@@ -367,13 +387,15 @@ main {
 }
 .subscription article {
     width: 100%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .subscription article h2 {
     margin-bottom: 1rem;
 }
 .plans {
-    width: 100%;
+    max-width: 720px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     gap: 1.5rem;
@@ -381,6 +403,7 @@ main {
 .plan-free-card,
 .plan-premium-card {
     width: 100%;
+    max-width: 430px;
     min-height: 60vh;
     display: grid;
     grid-template-rows: 1fr 2fr;
@@ -439,12 +462,14 @@ main {
     grid-template-areas: 
         "faq-head"
         "faq-accordian";
+    justify-content: center;
     gap: 2rem;
 }
 .tab {
-    width: 100%;
+    max-width: 25rem;
     height: 60px;
     margin-top: 2rem;
+    margin-inline: auto;
     background-color: var(--clr-slate);
     border-radius: 12px;
     padding: 8px;
@@ -454,6 +479,7 @@ main {
 }
 .tab button {
     height: 100%;
+    min-width: 80px;
     padding-inline: 1rem;
     border: none;
     border-radius: 8px;
@@ -492,7 +518,7 @@ main {
 }
 .question h3 {
     font-size: 1rem;
-    max-width: 30ch;
+    max-width: 55ch;
 }
 .plus-icon {
     height: 30px;
@@ -535,6 +561,7 @@ footer {
         "newsletter"
         "footer-nav"
         "contacts";
+    justify-content: center;
     gap: 1rem;
 }
 footer a {
@@ -556,6 +583,7 @@ footer a:hover {
 }
 .newsletter form {
     height: 100%;
+    max-width: 30rem;
     padding: 1rem;
     background-color: var(--clr-light);
     border-radius: 16px;
@@ -610,7 +638,7 @@ footer a:hover {
     }
 }
 
-@media (min-width: 568px) {
+@media (width > 576px) {
     .menu-toggle {
         display: none;
     }
@@ -648,5 +676,16 @@ footer a:hover {
         padding: 0;
         color: var(--clr-text-dark);
         background-color: var(--clr-btn-secondary);
+    }
+    .hero p {
+        width: 50ch;
+    }
+    .FAQ-accordian {
+        max-width: 37rem;
+    }
+    .newsletter,
+    .footer-nav,
+    .contacts {
+        width: 45rem;
     }
 }
