@@ -24,9 +24,9 @@
 
     /* Font-sizes */
     --font-size-base: 1rem;
-    --font-hero-head: clamp(2.25rem, 5vw, 6rem);
+    --font-hero-head: clamp(2.25rem, 5vw, 5rem);
     --font-hero-para: clamp(1.4rem, 2vw, 2rem);
-    --font-heading: clamp(2rem, 3vw, 4rem)
+    --font-heading: clamp(2rem, 3vw, 3rem)
 }
 /* SIMPLE CSS RESET */
 html:focus-within {
@@ -52,6 +52,9 @@ img, svg {
 
 input, button {
   font: inherit;
+}
+button {
+    transition: 240ms ease;
 }
 h1 {
     text-align: center;
@@ -238,9 +241,9 @@ header {
 /* <--- Hero Section Styling ---> */
 
 .hero {
-    min-height: 100vh;
+    height: auto;
     width: 100%;
-    padding: 70px 1rem 2rem 1rem;
+    padding: 70px 1rem 4rem 1rem;
     display: grid;
     grid-template-rows: repeat(2, auto);
     grid-template-areas: 
@@ -264,16 +267,15 @@ header {
     justify-content: center;
     gap: 1rem;
 }
-.hero figure {
-    width: 100%;
+.hero picture {
+    max-width: 80rem;
     height: 100%;
+    margin-inline: auto;
 }
-.hero figure img {
+.hero picture img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
 }
-
 main {
     display: grid;
     grid-template-rows: repeat(4, auto);
@@ -303,7 +305,7 @@ main {
     max-width: 25ch;
 }
 .get-started figure {
-    max-width: 64rem;
+    max-width: 80rem;
 }
 .get-started figure img {
     border-radius: 12px;
@@ -344,7 +346,6 @@ main {
         rgba(0,0,0,1) 20%,
         rgba(0,0,0,0)
     );
-    background-color: #1570F9;
 }
 .review {
     width: 100%;
@@ -377,7 +378,7 @@ main {
 }
 
 .subscription {
-    min-height: 100vh;
+    height: auto;
     width: 100%;
     padding-block-start: 4rem;
     display: flex;
@@ -395,7 +396,7 @@ main {
     margin-bottom: 1rem;
 }
 .plans {
-    max-width: 720px;
+    max-width: 48rem;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     gap: 1.5rem;
@@ -424,7 +425,6 @@ main {
 .plan-info {
     display: grid;
     gap: 2rem;
-    padding-bottom: 1rem;
 }
 .info-free {
     border-bottom: 1px solid var(--clr-divider-light);
@@ -501,6 +501,7 @@ main {
 .FAQ-accordian {
     width: 100%;
     gap: 1.25rem;
+    margin-inline: auto;
     padding-block-start: 1rem;
 }
 .accordian-item {
@@ -550,11 +551,15 @@ main {
     grid-template-rows: 1fr;
     padding-bottom: 1rem;
 }
-
 footer {
-    min-height: 80vh;
-    padding: 4rem 1rem;
+    display: flex;
+    justify-content: center;
     background-color: var(--clr-dark);
+}
+.footer {
+    height: auto;
+    max-width: 90rem;
+    padding: 4rem 1rem;
     display: grid;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: 
@@ -564,11 +569,11 @@ footer {
     justify-content: center;
     gap: 1rem;
 }
-footer a {
+.footer a {
     color: var(--clr-text-slate);
     transition: 240ms ease;
 }
-footer a:hover {
+.footer a:hover {
     color: var(--clr-text-light);
 }
 
@@ -638,7 +643,7 @@ footer a:hover {
     }
 }
 
-@media (width > 576px) {
+@media (width > 36rem) {
     .menu-toggle {
         display: none;
     }
@@ -681,11 +686,59 @@ footer a:hover {
         width: 50ch;
     }
     .FAQ-accordian {
-        max-width: 37rem;
+        max-width: 50rem;
     }
     .newsletter,
     .footer-nav,
     .contacts {
         width: 45rem;
+    }
+}
+
+@media (width > 48rem) {
+    .hero {
+        height: auto;
+        width: 100%;
+        padding: 70px 1rem 4rem 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .get-started figure {
+        width: 100%;
+    }
+    .get-started figure img {
+        width: 100%;
+        height: 100%;
+    }
+    .plans {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    .footer {
+        padding: 4rem 1rem;
+        background-color: var(--clr-dark);
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "newsletter footer-nav"
+            "contacts contacts";
+        justify-content: center;
+        gap: 4rem;
+    }
+    .newsletter,
+    .footer-nav,
+    .contacts {
+        width: auto;
+    }
+    .footer-nav {
+        padding-top: 3.2rem;
+    }
+    .contacts {
+        height: auto;
+        flex-direction: row;
     }
 }
