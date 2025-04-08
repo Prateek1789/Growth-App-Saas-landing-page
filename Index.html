@@ -43,9 +43,11 @@
                         <button type="button" class="btn--secondary">Book a demo</button>
                     </div>
                 </article>
-                <figure style="grid-area: img;">
-                    <img src="./assets/img-sm.svg" alt="">
-                </figure>
+                <picture style="grid-area: img;">
+                    <source media="(min-width: 48rem)" srcset="./assets/Images.svg">
+                    <source media="(max-width: 48rem)" srcset="./assets/img-sm.svg">
+                    <img src="./assets/Images.svg" alt="">
+                </picture>
             </section>
         </header>
 
@@ -247,54 +249,55 @@
 
         <!-- FOOTER -->
         <footer style="grid-area: footer;">
-
-            <div class="newsletter" style="grid-area: newsletter;">
-                <figure>
-                    <img src="./assets/Logo2.svg" class="footer-logo" alt="Brand Logo">
-                </figure>
-                <form action="" method="post">
-                    <span>
-                        <h3 class="newsletter-head">Subscribe to newsletter</h3>
-                        <p class="newsletter-para">
-                        Subscribe now to receive  tips on how to take your business to the next level.
-                        </p>
-                    </span>
-                    <fieldset>
-                        <input type="email" name="user_email" class="user-email" placeholder="Enter your email" />
-                        <button type="submit" class="sub-btn btn--primary">Subscribe</button>
-                    </fieldset>
-                </form>
-            </div>
-
-            <div class="footer-nav" style="grid-area: footer-nav;">
-                <ul class="footer-nav-list">
-                    <li class="nav-title">Company</li>
-                    <li class="footer-nav-itm"><a href="http://" target="_blank" rel="noopener noreferrer">About</a></li>
-                    <li class="footer-nav-itm"><a href="http://" target="_blank" rel="noopener noreferrer">Our Process</a></li>
-                    <li class="footer-nav-itm"><a href="http://" target="_blank" rel="noopener noreferrer">Join our team</a></li>
-                </ul>
-                <ul class="footer-nav-list company-resources">
-                    <li class="nav-title">Resources</li>
-                    <li class="footer-nav-itm"><a href="http://" target="_blank" rel="noopener noreferrer">News</a></li>
-                    <li class="footer-nav-itm"><a href="http://" target="_blank" rel="noopener noreferrer">Research</a></li>
-                    <li class="footer-nav-itm"><a href="http://" target="_blank" rel="noopener noreferrer">JRecent Projects</a></li>
-                </ul>
-            </div>
-
-            <div class="contacts" style="grid-area: contacts;">
-                <span>
-                    <ul class="footer-ul company-contact">
-                        <li class="head">Contact</li>
-                        <li><a href="http://" target="_blank" rel="noopener noreferrer">hello@growthapp.com</a></li>
+            <div class="footer">
+                <div class="newsletter" style="grid-area: newsletter;">
+                    <figure>
+                        <img src="./assets/Logo2.svg" class="footer-logo" alt="Brand Logo">
+                    </figure>
+                    <form action="" method="post">
+                        <span>
+                            <h3 class="newsletter-head">Subscribe to newsletter</h3>
+                            <p class="newsletter-para">
+                            Subscribe now to receive  tips on how to take your business to the next level.
+                            </p>
+                        </span>
+                        <fieldset>
+                            <input type="email" name="user_email" class="user-email" placeholder="Enter your email" />
+                            <button type="submit" class="sub-btn btn--primary">Subscribe</button>
+                        </fieldset>
+                    </form>
+                </div>
+    
+                <div class="footer-nav" style="grid-area: footer-nav;">
+                    <ul class="footer-nav-list">
+                        <li class="nav-title">Company</li>
+                        <li class="footer-nav-itm"><a href="http://" target="_blank" rel="noopener noreferrer">About</a></li>
+                        <li class="footer-nav-itm"><a href="http://" target="_blank" rel="noopener noreferrer">Our Process</a></li>
+                        <li class="footer-nav-itm"><a href="http://" target="_blank" rel="noopener noreferrer">Join our team</a></li>
                     </ul>
-                </span>
-                <span>
-                    <div class="socials">
-                        <a href="http://" target="_blank" rel="noopener noreferrer"><i class='txt-md bx bxl-linkedin'></i></a>
-                        <a href="http://" target="_blank" rel="noopener noreferrer"><i class='txt-md bx bxl-twitter'></i></a>
-                    </div>
-                    <p class="txt-Xsm">© 2023 Growth. All rights reserved</p>
-                </span> 
+                    <ul class="footer-nav-list company-resources">
+                        <li class="nav-title">Resources</li>
+                        <li class="footer-nav-itm"><a href="http://" target="_blank" rel="noopener noreferrer">News</a></li>
+                        <li class="footer-nav-itm"><a href="http://" target="_blank" rel="noopener noreferrer">Research</a></li>
+                        <li class="footer-nav-itm"><a href="http://" target="_blank" rel="noopener noreferrer">JRecent Projects</a></li>
+                    </ul>
+                </div>
+    
+                <div class="contacts" style="grid-area: contacts;">
+                    <span>
+                        <ul class="footer-ul company-contact">
+                            <li class="head">Contact</li>
+                            <li><a href="http://" target="_blank" rel="noopener noreferrer">hello@growthapp.com</a></li>
+                        </ul>
+                    </span>
+                    <span>
+                        <div class="socials">
+                            <a href="http://" target="_blank" rel="noopener noreferrer"><i class='txt-md bx bxl-linkedin'></i></a>
+                            <a href="http://" target="_blank" rel="noopener noreferrer"><i class='txt-md bx bxl-twitter'></i></a>
+                        </div>
+                        <p class="txt-Xsm">© 2023 Growth. All rights reserved</p>
+                    </span> 
+                </div>
             </div>
         </footer>
     </div>
